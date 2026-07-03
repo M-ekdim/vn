@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Iron Pulse Fitness | Unleash Your Potential</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#454747",
+                    "surface-container-high": "#2a2a2a",
+                    "surface": "#131313",
+                    "surface-container-highest": "#353535",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-tertiary-container": "#282a2a",
+                    "outline-variant": "#414754",
+                    "tertiary": "#c6c6c7",
+                    "tertiary-fixed": "#e2e2e2",
+                    "secondary-container": "#4a4949",
+                    "primary-container": "#4a8eff",
+                    "on-primary": "#002e68",
+                    "error-container": "#93000a",
+                    "surface-container": "#202020",
+                    "background": "#131313",
+                    "on-background": "#e5e2e1",
+                    "on-primary-fixed": "#001a41",
+                    "on-error-container": "#ffdad6",
+                    "outline": "#8b90a0",
+                    "primary-fixed": "#d8e2ff",
+                    "on-secondary": "#313030",
+                    "secondary": "#c8c6c5",
+                    "on-secondary-container": "#bab8b7",
+                    "on-error": "#690005",
+                    "primary-fixed-dim": "#adc7ff",
+                    "on-secondary-fixed-variant": "#474646",
+                    "on-primary-container": "#00285b",
+                    "surface-container-low": "#1b1b1c",
+                    "surface-dim": "#131313",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary": "#2f3131",
+                    "inverse-primary": "#005bc0",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-surface": "#e5e2e1",
+                    "on-surface-variant": "#c1c6d7",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-variant": "#353535",
+                    "primary": "#adc7ff",
+                    "surface-tint": "#adc7ff",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "tertiary-container": "#909191",
+                    "on-primary-fixed-variant": "#004493",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "inverse-on-surface": "#303030",
+                    "error": "#ffb4ab",
+                    "surface-bright": "#393939"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "xl": "64px",
+                    "gutter": "24px",
+                    "lg": "40px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "caption": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(65, 71, 84, 0.5);
+        }
+        .electric-glow {
+            box-shadow: 0 0 20px rgba(173, 199, 255, 0.3);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, minmax(200px, auto));
+            gap: 24px;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary selection:text-on-primary">
+
+<!-- Top Navigation Bar -->
+<header class="w-full top-0 sticky z-50 border-b border-outline-variant bg-surface/95 backdrop-blur-md">
+    <nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+        <div class="font-display-lg text-headline-md font-extrabold text-primary uppercase tracking-tighter">
+            Iron Pulse
+        </div>
+        <div class="hidden md:flex items-center space-x-lg">
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">About</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#amenities">Amenities</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#classes">Classes</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#pricing">Pricing</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+        </div>
+        <button class="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-lg hover:brightness-110 active:scale-95 transition-all duration-300 shadow-lg shadow-primary/20">
+            Join Now
+        </button>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="relative h-[921px] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="A cinematic wide shot of a high-end, modern gym at night..." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQzAdlOYe-4JcKJ1UDybr3U_PysfHSgqXug9aLK8L_r38dydCn3iqt-9CPAN2hZ0gxXe06cs4gO6DSz-MP2mrS7GMZz00Dk_aeUOzoxzLBCcfFNzxeTuGRy2zu4NI0JJDVhAcVO6E0h7RIvZCkfco0kSfVfEbTfElzz3MfSqGY_oATlAisoHyDHlkvT-muYiKWCpHZpz2-sS11eJ-gypEyLLwrM3Joj2FtzJo65w06bNGv9R-8Tgp67Bved_x5UPJRop3RGu-eIbQ')">
+            <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-container-max mx-auto px-gutter w-full">
+            <div class="max-w-2xl">
+                <h1 class="font-display-lg text-display-lg text-on-surface mb-sm">
+                    Unleash Your <span class="text-primary">Potential.</span><br/>Crush Your Goals.
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed">
+                    Join the elite community where performance meets precision. Our state-of-the-art facility and expert coaching are designed to push you beyond your limits.
+                </p>
+                <div class="flex flex-wrap gap-md">
+                    <a class="bg-primary text-on-primary font-label-md text-label-md px-xl py-md rounded-lg flex items-center justify-center gap-sm hover:scale-105 transition-transform duration-300" href="#pricing">
+                        View Memberships
+                    </a>
+                    <button class="border-2 border-primary text-primary font-label-md text-label-md px-xl py-md rounded-lg hover:bg-primary/10 transition-colors duration-300">
+                        Book a Free Tour
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-xl bg-surface" id="about">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid md:grid-cols-2 gap-xl items-center">
+                <div class="relative aspect-square rounded-xl overflow-hidden shadow-2xl border border-outline-variant">
+                    <div class="absolute inset-0 bg-cover bg-center" data-alt="A group of diverse, athletic people..." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyCpU2JQX9WLwQ2LqXjJIWg0OLDJzO3jaJ7YooroczcVSEpPKxv7wCuYW-GRHmyxEGkQIozRvhD4ZfhccqpBgU1CB4Lijc4FUQKJgFy9yua2isOB4Iu0zyPbR1Iniekp5mcZivYLcOtm4UxXbWXioR6Lxtm75EbfQtWV7rHQOfhKJlXgvn8uSk3Qeii3wsFG_9dYzIKRq9aW7iCoEgXEnmKrfXW35QV5MalWvFi-j1Z2P91P4n9d0sN3LUlu386XOH3arJsE2ALA4')"></div>
+                </div>
+                <div>
+                    <span class="text-primary font-label-md text-label-md uppercase tracking-widest mb-sm block">Our Philosophy</span>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">More Than Just a Gym—A Performance Community.</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                        At Iron Pulse, we believe that fitness is a collective journey. Our foundation is built on the pillars of expert knowledge, uncompromising standards, and a supportive environment where every member is encouraged to be their best self.
+                    </p>
+                    <ul class="space-y-sm">
+                        <li class="flex items-center gap-sm text-on-surface">
+                            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span>Expert-Led Personal Training</span>
+                        </li>
+                        <li class="flex items-center gap-sm text-on-surface">
+                            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span>Result-Driven Training Programs</span>
+                        </li>
+                        <li class="flex items-center gap-sm text-on-surface">
+                            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span>Inclusive High-Performance Culture</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Bento Grid -->
+    <section class="py-xl bg-surface-container-lowest" id="amenities">
+        <div class="max-w-container-max mx-auto px-gutter text-center mb-xl">
+            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">World-Class Amenities</h2>
+            <p class="text-on-surface-variant max-w-xl mx-auto">Precision tools for high-performance outcomes. Experience the difference of professional-grade equipment.</p>
+        </div>
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="bento-grid">
+                <div class="col-span-1 md:col-span-2 glass-card p-lg rounded-xl flex flex-col justify-end min-h-[300px] relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-md opacity-20 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-7xl text-primary">fitness_center</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-xs text-primary">Strength Equipment</h3>
+                    <p class="text-on-surface-variant">Top-of-the-line racks, platforms, and free weights from world-leading manufacturers.</p>
+                </div>
+                <div class="col-span-1 glass-card p-lg rounded-xl flex flex-col justify-center items-center text-center group">
+                    <span class="material-symbols-outlined text-primary text-5xl mb-sm group-hover:scale-110 transition-transform">directions_run</span>
+                    <h3 class="font-label-md text-label-md uppercase mb-xs">Cardio Zone</h3>
+                    <p class="caption text-on-surface-variant">Connected tech for performance tracking.</p>
+                </div>
+                <div class="col-span-1 glass-card p-lg rounded-xl flex flex-col justify-center items-center text-center group">
+                    <span class="material-symbols-outlined text-primary text-5xl mb-sm group-hover:scale-110 transition-transform">groups</span>
+                    <h3 class="font-label-md text-label-md uppercase mb-xs">Group Studio</h3>
+                    <p class="caption text-on-surface-variant">Spacious area for dynamic movements.</p>
+                </div>
+                <div class="col-span-1 glass-card p-lg rounded-xl flex flex-col justify-center items-center text-center group">
+                    <span class="material-symbols-outlined text-primary text-5xl mb-sm group-hover:scale-110 transition-transform">clean_hands</span>
+                    <h3 class="font-label-md text-label-md uppercase mb-xs">Clean Lockers</h3>
+                    <p class="caption text-on-surface-variant">Sanitized, modern, and secure facilities.</p>
+                </div>
+                <div class="col-span-1 md:col-span-3 glass-card p-lg rounded-xl flex items-center gap-lg group overflow-hidden">
+                    <div class="hidden md:flex w-32 h-32 rounded-lg bg-surface flex-shrink-0 items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-6xl">badge</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-md text-headline-md mb-xs text-primary">Certified Personal Trainers</h3>
+                        <p class="text-on-surface-variant">Our coaches hold the industry's gold-standard certifications and are dedicated to your specific evolution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section class="py-xl bg-surface" id="classes">
+        <div class="max-w-container-max mx-auto px-gutter mb-xl flex flex-col md:flex-row md:items-end justify-between gap-md">
+            <div>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Training Classes</h2>
+                <p class="text-on-surface-variant">Find the discipline that drives your progress.</p>
+            </div>
+            <button class="text-primary flex items-center gap-xs hover:gap-sm transition-all">
+                View Full Schedule <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md mb-xl">
+            <!-- Class Cards -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-sm border border-outline-variant relative">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A professional close-up..." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMznTJtpElnLpPYlZCd_SCBUscPj7tv0ZHT8ZAC9KBlwMqaPJdjmf6AeNeXVdbmVLRF5bTq-CcS_cbxe81MU7vZIjjVl1OF4hrp8sG2MZr6hNrYEyP1hQvXM3ghoCtaQUvS_V1zEwzEE8hCk-QCv7pJt5NOqp4dLoRksy1jR-8bKjj_ee8Dz5DQgx0z5L6JPGkXQB8RGczGGyxIfH1OX_F7TLOBK1TeoXkmIRyWEJZW0D0hNuj9d6u9rSRvxMCERY-rJU8It-bDoE')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-0 p-md">
+                        <h4 class="font-headline-md text-on-surface">Free Weights</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-sm border border-outline-variant relative">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A person performing a dynamic battle rope workout..." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARnJUjhUPhWDsV6jzEpkIyQEH115B8G5HrZZxzfkTvs6E7U09lIf2zYqtgEwMfYA-CnpSNkkJYenjZ96jM0fErP2qL0Qvo0sDI9H4xNXrXjepZLKMlyiM0DGNhdY3D_dfuZE9SbE9jGnqU8OC7B8zOoEZYgfbm8LA5vk030FcSSfIMTc87to8wgQTVyOKc-h_iipkiSYDBv3xfvRpzVLRmpIjW-A10TKeqDnBpdZewp6MWb7HLd3HVoY-0b_Sw_4dPFAkSe2AiHT0')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-0 p-md">
+                        <h4 class="font-headline-md text-on-surface">Functional Fitness</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-sm border border-outline-variant relative">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A focused personal training session..." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABRGMlF2QVe3GQCjdmqkiMsVfAOhKAn-O-9GK9cUMzVvEkGSHUO4Rp0yzpYMDHsJ_CFU-W40qkvzEI4MVg-kyfa-Mmkp1Zkj9M3V8aMcwZkQTptPgfPE-HscXU52cHL5amjGiffTzytfjO8p3sxo3NVabMLbYOywwqm0sHAXNwV_DQ4ckP4Dw9aGA5VKJQ-ibfmP92WwLBlV13qixllaeEvf0P0K37JqmJAETyXFuLMNTi0VTL8t4iWNTK0FhwgwdOmGhm6yctf1o')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-0 p-md">
+                        <h4 class="font-headline-md text-on-surface">Personal Training</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-sm border border-outline-variant relative">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A wide shot of a high-energy group fitness class..." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCF_jziMvi4lkp_SuG889Pmpw2WYSE2xgUVe8UZD9hWCpYFNGY73TiuWjPmKDHQuSw2Og6nfkr53GHCTAZlfwMQxh6d2bvDjqWKjAe6KaJqjMUnLYdqUC0qdtbmfLTOQOHfgQlFJP0Y_v2B0F6xoF5RYoPtVTh67WPBmu0xidtIyKO5QZgY6jCT17CnLdZ7SRNSKVy5L8DrOPf4UrqRwNwCTyYzHVMfCWtT_6PUmSmnXs7MmGkGHh_9y-fiULsMIQTfVo0o0XxKfdQ')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-0 p-md">
+                        <h4 class="font-headline-md text-on-surface">Group Classes</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendar Placeholder -->
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="bg-surface-container rounded-xl p-lg border border-outline-variant overflow-hidden">
+                <div class="flex items-center justify-between mb-lg">
+                    <h3 class="font-headline-md">Weekly Schedule</h3>
+                    <div class="flex gap-sm">
+                        <button class="p-xs hover:bg-surface-variant rounded"><span class="material-symbols-outlined">chevron_left</span></button>
+                        <span class="font-label-md">Oct 21 - Oct 27</span>
+                        <button class="p-xs hover:bg-surface-variant rounded"><span class="material-symbols-outlined">chevron_right</span></button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-7 gap-px bg-outline-variant overflow-x-auto min-w-[700px]">
+                    <!-- Days of week -->
+                    <div class="bg-surface p-sm text-center font-label-md text-primary">MON</div>
+                    <div class="bg-surface p-sm text-center font-label-md text-primary">TUE</div>
+                    <div class="bg-surface p-sm text-center font-label-md text-primary">WED</div>
+                    <div class="bg-surface p-sm text-center font-label-md text-primary">THU</div>
+                    <div class="bg-surface p-sm text-center font-label-md text-primary">FRI</div>
+                    <div class="bg-surface p-sm text-center font-label-md text-primary">SAT</div>
+                    <div class="bg-surface p-sm text-center font-label-md text-primary">SUN</div>
+                    <!-- Calendar Entries -->
+                    <div class="bg-surface p-sm min-h-[100px]">
+                        <div class="bg-primary/10 border-l-2 border-primary p-xs mb-xs rounded text-xs">
+                            <p class="font-bold">6:00 AM</p>
+                            <p>Power Lift</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface p-sm min-h-[100px]">
+                        <div class="bg-primary/10 border-l-2 border-primary p-xs mb-xs rounded text-xs">
+                            <p class="font-bold">7:30 AM</p>
+                            <p>Cardio Blast</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface p-sm min-h-[100px]"></div>
+                    <div class="bg-surface p-sm min-h-[100px]">
+                        <div class="bg-primary/10 border-l-2 border-primary p-xs mb-xs rounded text-xs">
+                            <p class="font-bold">6:00 AM</p>
+                            <p>Yoga Flow</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface p-sm min-h-[100px]"></div>
+                    <div class="bg-surface p-sm min-h-[100px]">
+                        <div class="bg-primary/10 border-l-2 border-primary p-xs mb-xs rounded text-xs">
+                            <p class="font-bold">9:00 AM</p>
+                            <p>Bootcamp</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface p-sm min-h-[100px]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-xl bg-surface-container-lowest" id="pricing">
+        <div class="max-w-container-max mx-auto px-gutter text-center mb-xl">
+            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Membership Plans</h2>
+            <p class="text-on-surface-variant">Simple, transparent pricing for your fitness journey.</p>
+        </div>
+        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-lg pt-4">
+            <!-- Basic -->
+            <div class="bg-surface p-lg rounded-xl border border-outline-variant flex flex-col hover:border-primary/50 transition-colors">
+                <h3 class="font-headline-md mb-xs">Basic</h3>
+                <div class="mb-md">
+                    <span class="text-display-lg font-extrabold text-primary">$29</span>
+                    <span class="text-on-surface-variant">/mo</span>
+                </div>
+                <ul class="space-y-sm mb-xl flex-grow">
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Gym &amp; Cardio access</li>
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Initial assessment</li>
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Locker access</li>
+                </ul>
+                <button class="w-full border border-primary text-primary py-sm rounded-lg hover:bg-primary/10 font-label-md">Choose Basic</button>
+            </div>
+            <!-- Standard (Popular) -->
+            <div class="bg-surface-container-high p-lg rounded-xl border-2 border-primary flex flex-col relative scale-105 electric-glow">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-md py-xs rounded-full text-xs font-bold uppercase tracking-wider">
+                    Most Popular
+                </div>
+                <h3 class="font-headline-md mb-xs">Standard</h3>
+                <div class="mb-md">
+                    <span class="text-display-lg font-extrabold text-primary">$49</span>
+                    <span class="text-on-surface-variant">/mo</span>
+                </div>
+                <ul class="space-y-sm mb-xl flex-grow">
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Full facility access</li>
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Unlimited classes</li>
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> 1x Guest pass/month</li>
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Locker access</li>
+                </ul>
+                <button class="w-full bg-primary text-on-primary py-sm rounded-lg hover:brightness-110 font-label-md">Join Standard</button>
+            </div>
+            <!-- VIP -->
+            <div class="bg-surface p-lg rounded-xl border border-outline-variant flex flex-col hover:border-primary/50 transition-colors">
+                <h3 class="font-headline-md mb-xs">Premium VIP</h3>
+                <div class="mb-md">
+                    <span class="text-display-lg font-extrabold text-primary">$89</span>
+                    <span class="text-on-surface-variant">/mo</span>
+                </div>
+                <ul class="space-y-sm mb-xl flex-grow">
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> All Standard benefits</li>
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">star</span> 2x Personal training / mo</li>
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Unlimited guest passes</li>
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Towel service</li>
+                    <li class="flex items-center gap-xs text-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> 10% Pro-shop discount</li>
+                </ul>
+                <button class="w-full border border-primary text-primary py-sm rounded-lg hover:bg-primary/10 font-label-md">Go VIP</button>
+            </div>
+        </div>
+        <div class="max-w-2xl mx-auto px-gutter mt-lg text-center">
+            <p class="caption text-on-surface-variant italic">
+                $30 sign-up fee applies to Basic and Standard plans. Cancel anytime with 30 days notice.
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-xl bg-surface">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-xl text-center">Member Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+                <div class="p-lg bg-surface-container rounded-xl border border-outline-variant">
+                    <div class="flex text-primary mb-sm">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="font-body-md mb-md italic">"The cleanliness here is unmatched. I’ve been to many gyms, but Iron Pulse keeps their equipment in pristine condition. The community is so welcoming!"</p>
+                    <p class="font-label-md text-primary">— Sarah M.</p>
+                </div>
+                <div class="p-lg bg-surface-container rounded-xl border border-outline-variant">
+                    <div class="flex text-primary mb-sm">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="font-body-md mb-md italic">"Finally found a place that takes strength training seriously. The personal trainers are incredibly knowledgeable and helped me break my deadlift plateau."</p>
+                    <p class="font-label-md text-primary">— James L.</p>
+                </div>
+                <div class="p-lg bg-surface-container rounded-xl border border-outline-variant">
+                    <div class="flex text-primary mb-sm">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="font-body-md mb-md italic">"Amazing group classes! The energy in the morning sessions is what gets me through my workday. Highly recommend the Functional Fitness sessions."</p>
+                    <p class="font-label-md text-primary">— Elena R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location -->
+    <section class="py-xl bg-surface-container-lowest" id="contact">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid md:grid-cols-2 gap-xl">
+                <!-- Contact Form -->
+                <div class="bg-surface p-lg rounded-xl border border-outline-variant">
+                    <h2 class="font-headline-lg text-headline-lg mb-md">Get in Touch</h2>
+                    <form class="space-y-md">
+                        <div class="grid grid-cols-2 gap-md">
+                            <div>
+                                <label class="font-label-md mb-xs block text-on-surface-variant">Name</label>
+                                <input class="w-full bg-surface-container-low border-outline rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-all" type="text"/>
+                            </div>
+                            <div>
+                                <label class="font-label-md mb-xs block text-on-surface-variant">Email</label>
+                                <input class="w-full bg-surface-container-low border-outline rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-all" type="email"/>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="font-label-md mb-xs block text-on-surface-variant">Subject</label>
+                            <select class="w-full bg-surface-container-low border-outline rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-all">
+                                <option>Membership Inquiry</option>
+                                <option>Book a Tour</option>
+                                <option>Personal Training</option>
+                                <option>General Question</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="font-label-md mb-xs block text-on-surface-variant">Message</label>
+                            <textarea class="w-full bg-surface-container-low border-outline rounded-lg focus:border-primary focus:ring-1 focus:ring-primary transition-all" rows="4"></textarea>
+                        </div>
+                        <button class="w-full bg-primary text-on-primary font-label-md py-md rounded-lg hover:brightness-110 transition-all">Send Inquiry</button>
+                    </form>
+                </div>
+                <!-- Info & Map -->
+                <div class="flex flex-col gap-lg">
+                    <div class="grid grid-cols-2 gap-md">
+                        <div>
+                            <h4 class="font-label-md text-primary uppercase mb-xs">Location</h4>
+                            <p class="text-on-surface">123 Steel Pulse Way<br/>Performance District, NY 10001</p>
+                        </div>
+                        <div>
+                            <h4 class="font-label-md text-primary uppercase mb-xs">Contact</h4>
+                            <p class="text-on-surface">P: (555) 123-4567<br/>E: train@ironpulse.fit</p>
+                        </div>
+                        <div class="col-span-2">
+                            <h4 class="font-label-md text-primary uppercase mb-xs">Operating Hours</h4>
+                            <div class="grid grid-cols-2 gap-sm text-on-surface">
+                                <div>
+                                    <p class="font-bold">Mon - Fri</p>
+                                    <p>5:00 AM - 10:00 PM</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Sat - Sun</p>
+                                    <p>7:00 AM - 8:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-grow rounded-xl overflow-hidden border border-outline-variant grayscale">
+                        <img alt="Map" class="w-full h-full object-cover min-h-[300px]" data-location="New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ6133Rn2SV9EE9Bj8QHf08eatlcFbPbtNjOIZVp82y6UdAyDpsqFlGolZBs69I0Am52QQfKGKY2Awdan22Q7xlCA08FbrMT-f6GKXEROxyR2EijYBQzBPHaTnqmbIxzus_TzK_J9u9BHtLspDcYOTQhj947lw1TMYoGVS3qTKB6hQyHCY6OxfAgksBB6GoUuUwHD1wie0ZdwNl2YsszA9bad55Mw97nLjYejGxQJ3SGKJnjLoqXrfRcQWDbltJY_Rl7qt4GMK-o8"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-xl px-gutter max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-md border-t border-outline-variant bg-surface-container-lowest">
+    <div class="col-span-1 md:col-span-1">
+        <div class="font-display-lg text-headline-md font-bold text-primary mb-sm">Iron Pulse</div>
+        <p class="text-on-surface-variant font-body-md mb-md">High-performance training facility built for those who demand more from themselves.</p>
+        <div class="flex gap-sm">
+            <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all" href="#">
+                <span class="material-symbols-outlined text-lg">public</span>
+            </a>
+            <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all" href="#">
+                <span class="material-symbols-outlined text-lg">chat</span>
+            </a>
+        </div>
+    </div>
+    <div>
+        <h5 class="font-label-md text-on-surface uppercase mb-md">Quick Links</h5>
+        <ul class="space-y-sm">
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Join Now</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Schedule</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Personal Training</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Pro-Shop</a></li>
+        </ul>
+    </div>
+    <div>
+        <h5 class="font-label-md text-on-surface uppercase mb-md">Resources</h5>
+        <ul class="space-y-sm">
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Accessibility</a></li>
+        </ul>
+    </div>
+    <div>
+        <h5 class="font-label-md text-on-surface uppercase mb-md">Newsletter</h5>
+        <p class="caption text-on-surface-variant mb-sm">Get training tips and exclusive offers.</p>
+        <div class="flex">
+            <input class="bg-surface border-outline-variant rounded-l-lg w-full focus:ring-1 focus:ring-primary px-sm" placeholder="Email" type="email"/>
+            <button class="bg-primary text-on-primary px-sm rounded-r-lg"><span class="material-symbols-outlined">send</span></button>
+        </div>
+    </div>
+    <div class="col-span-full pt-lg border-t border-outline-variant/30 text-center text-on-surface-variant caption">
+        © 2026 Iron Pulse Fitness. Built for High-Performance.
+    </div>
+</footer>
+
+<script>
+    // Robust scroll animation observer
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('opacity-0', 'translate-y-8');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Filter out the hero section's wrapper from being hidden initially
+    document.querySelectorAll('section > div').forEach((sectionDiv) => {
+        if (!sectionDiv.closest('section').classList.contains('relative')) {
+            sectionDiv.classList.add('transition-all', 'duration-700', 'transform', 'opacity-0', 'translate-y-8');
+            observer.observe(sectionDiv);
+        }
+    });
+</script>
+</body>
+</html>
